@@ -1,10 +1,5 @@
 /*
-* CSCI3150 Assignment 1 - Writing a Simple Shell
-* Feel free to modify the given code.
-* Press Ctrl-D to end the program
-*
-*  You may put down your reference here:
-*
+* Simple Shell
 */
 
 /* Header Declaration */
@@ -19,8 +14,8 @@ int getUserInput(char* input);
 void tokenizeInput(char* input);
 char path[80];
 char stack[80][255];
-int top=-1;
-int global_or=0;
+int top = -1;
+int global_or = 0;
 
 void sig_handler(int sig){
 

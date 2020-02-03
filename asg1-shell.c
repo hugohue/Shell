@@ -31,13 +31,8 @@ int main(int argc,char* argv[])
   do {
     char rawInput[255];
     isExit = getUserInput(rawInput);
-
     if(isExit) break;
-
     tokenizeInput(rawInput);
-
-
-
   } while(isExit = 1);
   return 0;
 }
@@ -53,10 +48,9 @@ int getUserInput(char* input)
   char buf[255];
   char tmp[4];
   int k;
+	
  // printf("LDER: %s",path);
   getcwd(path, sizeof(path));
-
-
   char *s = buf;
   printf("[3150 Shell:%s]=> ",path);
   if(fgets(buf,255,stdin) == NULL)
@@ -64,18 +58,16 @@ int getUserInput(char* input)
     putchar('\n');
     return 1;
   }
+	
   // Remove \n
   for(;*s != '\n';s++);
   *s = '\0';
-  
-
-
   strcpy(input,buf);
-
   for(k=0;k<3;k++){
   	tmp[k]=input[k];
   }
   tmp[k]='\0';
+	
  // printf("%s\n",tmp);
   if(strcmp(tmp,"bye")==0){
   	if(strcmp(input,"bye")==0){
